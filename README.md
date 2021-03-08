@@ -14,8 +14,14 @@ Zookeeper: 3.6.1
 
 ## Run 
 
+* Spark Streaming(Dstreams)
 ```
-spark-submit --packages org.apache.spark:spark-streaming-kafka-0-8_2.11:2.0.0 --jars jar/elasticsearch-spark-20_2.11-7.6.1.jar run.py
+spark-submit --packages org.apache.spark:spark-sql-kafka-0-10_2.11:2.4.0 --jars jar/elasticsearch-spark-20_2.11-7.6.1.jar Dstream/run.py
+```
+
+* Structured Streaming
+```
+park-submit --packages org.apache.spark:spark-sql-kafka-0-10_2.11:2.4.0 --jars jar/elasticsearch-spark-20_2.11-7.6.1.jar --conf spark.cores.max=2 Structured/structerd.py
 ```
 
 ## Output
