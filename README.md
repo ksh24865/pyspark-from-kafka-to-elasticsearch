@@ -1,5 +1,5 @@
 # pyspark-from-kafka-to-elasticsearch
-
+Save the data produced to Kafka in ES through PySpark streaming
 
 
 ## Version
