@@ -21,6 +21,6 @@ spark-submit --packages org.apache.spark:spark-streaming-kafka-0-8_2.11:2.0.0 --
 ## Output
 * Consumed data from Kafka
 <img width="540" alt="image (1)" src="https://user-images.githubusercontent.com/55729930/110294095-c2367100-8032-11eb-8408-da7c88816b29.png">
-<br/>
+
 * Data stored in ES
 <img width="500" alt="image (2)" src="https://user-images.githubusercontent.com/55729930/110294099-c3679e00-8032-11eb-97de-1de56a89cd18.png">
