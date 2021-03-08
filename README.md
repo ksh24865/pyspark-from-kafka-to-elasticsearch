@@ -6,7 +6,7 @@ Save the data produced to Kafka in ES through PySpark streaming
 ```
 Python: 3.8.0
 Spark: spark-2.4.7-bin-hadoop2.7
-Pyspark: 3.1.1
+Pyspark: 2.4.7
 ElasticSearch: 7.6.1
 Kafka: 2.5.0
 Zookeeper: 3.6.1 
