@@ -3,7 +3,7 @@ import json
 from pyspark import SparkContext
 from pyspark.streaming import StreamingContext
 from pyspark.streaming.kafka import KafkaUtils
-import conf
+from Dstream import conf
 
 def format_data(x):
         return (x[conf.es_mapping_id], json.dumps(x))

@@ -4,8 +4,8 @@ from pyspark import SparkContext
 from pyspark.streaming import StreamingContext
 from pyspark.streaming.kafka import KafkaUtils
 
-import conf
-import func
+from Dstream import conf
+from Dstream import func
 
 if __name__ == "__main__":
 
@@ -15,8 +15,8 @@ if __name__ == "__main__":
     kvs = KafkaUtils.createDirectStream(ssc, [conf.kf_topic], {"metadata.broker.list": conf.kf_ip+":"+conf.kf_port})
 
     dStream = kvs.map(lambda x: x[1])
-    print("~!!!!!!!!!!!!!!!!!",type(dStream),"!~!~!~@~!@#~!@#$!@")
-    dStream.pprint()
+    
+    # dStream.pprint()
     dStream.foreachRDD(lambda rdd: func.send_data(sc,rdd))
 
     ssc.start()
