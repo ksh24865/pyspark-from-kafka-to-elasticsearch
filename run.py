@@ -15,6 +15,7 @@ if __name__ == "__main__":
     kvs = KafkaUtils.createDirectStream(ssc, [conf.kf_topic], {"metadata.broker.list": conf.kf_ip+":"+conf.kf_port})
 
     dStream = kvs.map(lambda x: x[1])
+    print("~!!!!!!!!!!!!!!!!!",type(dStream),"!~!~!~@~!@#~!@#$!@")
     dStream.pprint()
     dStream.foreachRDD(lambda rdd: func.send_data(sc,rdd))
 
